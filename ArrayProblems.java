@@ -215,16 +215,65 @@ public class ArrayProblems {
 		System.out.println("Secondhighest : "+hEle2);
 		
 		
+
+		// Rotations
+		
+//		int[] a = {10,20,30,40};
+//		int n = 1;
+		
+			// CLOCKWISE ROTATION
+		// 1 - {20,30,40,10}
+		// 2 - {30,40,10,20} 
+		// 3 - {40,10,20,30}
+		// 4 - {10,20,30,40}
+		// 5 - {20,20,40,10} - 1st rotation array
 		
 		
-
-
-
-
-
-
-
-
+//		for(int j=1;j<=n%a.length;j++) {
+//			
+//			int temp = a[0];
+//			
+//			for(int i=1;i<a.length;i++) {
+//				a[i-1] = a[i];
+//			}
+//			
+//			a[a.length-1] = temp;
+//		}
+//		
+//		for(int data : a) {
+//			System.out.print(data+" ");
+//		}
+		
+		
+		
+		int[] a = {10,20,30,40};
+		int n = 5;
+		
+			//ANTI-CLOCKWISE DIRECTION
+//		1 - {40,10,20,30}
+//		2 - {30,40,10,20}
+//		3 - {20,30,40,10}
+//		4 - {10,20,30,40}
+		
+		
+		int rotations = n % a.length;
+				
+		for(int j=0;j<rotations;j++) {
+			
+			int temp = a[a.length-1];
+			
+			for(int i=a.length-1;i>0;i--) {
+				a[i] = a[i-1];
+			}
+			
+			a[0] = temp;
+			
+		}
+		
+		for(int data : a) {
+			System.out.print(data+" ");
+		}
+		
 
 		
 		
