@@ -164,6 +164,57 @@ public class ArrayProblems {
 		for(int data : a) {
 			System.out.print(data+" ");
 		}
+
+
+		
+		int[] a = {10,20};
+		
+		// calculate first highest along with second highest
+		
+		int highestElement = a[0]; //20
+		int secondHighestElement = a[0]; //10
+		
+		// 30
+		
+		for(int data : a) {
+
+			if(a[1]>highestElement) {
+				secondHighestElement = highestElement;
+				highestElement = a[1];
+			}
+		}
+	
+		System.out.println(highestElement);
+		System.out.println(secondHighestElement);
+		
+		
+		
+		int[] a = {10,20,11,13};
+		
+		int hEle1 = a[0];
+		int hEle2 = a[0];
+		
+		for(int i=1;i<a.length;i++) {
+			
+			int value = a[i];
+			
+			if(value == hEle1) 
+				continue;
+				
+				if(value > hEle1) {
+					hEle2 = hEle1;
+					hEle1 = value;
+				}
+				else if(value > hEle2){
+					hEle2 = value;
+				}
+			
+		}
+		
+		System.out.println("Highest : "+hEle1);
+		System.out.println("Secondhighest : "+hEle2);
+		
+		
 		
 		
 
