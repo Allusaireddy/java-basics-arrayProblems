@@ -133,6 +133,49 @@ public class ArrayProblems {
 		
 		System.out.println("Highest : "+Highest);
 		System.out.println("SecondHighest : "+secondHighest);
+
+
+
+		// Rotations 
+		
+		int[] a = {10,20,30,40};
+		
+		//{20,30,40,10}
+		//{30,40,10,20}
+		//{40,10,20,30}
+		//{10,20,30,40} 4th - original array
+		//{20,30,40,10} 5th - 1
+		//{30,40,10,20} 6th - 2
+		//{40,10,20,30} 7th - 3
+		//{10,20,30,40} 8th - original
+		
+		int n =2;
+		int totalTimes = n%a.length;
+		
+		for(int j=1;j<=totalTimes;j++) {
+			
+			int temp = a[0];
+			for(int i=1;i<=a.length-1;i++){
+				a[i-1] = a[i];
+			}
+			a[a.length-1] = temp;	
+		}
+		
+		for(int data : a) {
+			System.out.print(data+" ");
+		}
+		
+		
+
+
+
+
+
+
+
+
+
+		
 		
 	}
 
